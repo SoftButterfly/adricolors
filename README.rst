@@ -43,10 +43,12 @@ All the content created by the `authors`_ in this repository is subject to
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Any question about the program in this repository can be asked to contact@softbutterfly.io
 
 Disclaimer
 ==========
 
 If you find some resources protected by Copyright in this repository, please
 let us know to take the coresponding actions.
+
+Any question about the program in this repository can be asked to
+info@softbutterfly.space
