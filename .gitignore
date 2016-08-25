@@ -1,4 +1,15 @@
 # Folder Patterns
+www/static/
+www/media/
+__pycache__/
+migrations
 
 # File patterns
+*$py.class
+*.mo
+*.pot
+*.py[cod]
+*.pyc
+*.sqlite3
+.ipynb_checkpoints
 .st*
