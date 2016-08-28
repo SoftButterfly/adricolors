@@ -17,7 +17,8 @@ MEDIA_ROOT = os.getenv('ADRICOLORS_MEDIA_ROOT', os.path.join(BASE_DIR, "media"))
 Administrators
 """
 ADMINS = (
-    ("Martin Josemaria", "martin.vuelta@gmail.com"),
+    ("SoftButterfly Developer Team", "dev@softbutterfly.space"),
+    ("Adricolors Systems Supervisor", "sysadmin@adricolors.com"),
 )
 
 
@@ -46,19 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Wagtail
-    'wagtail.wagtailforms',
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailsites',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailcore',
-
     # Other Third Party
     'captcha',
     'compressor',
@@ -85,10 +73,6 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # Wagtail
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
 
@@ -117,7 +101,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-            'builtins': ['overextends.templatetags.overextends_tags'],
+            'builtins': [
+                'overextends.templatetags.overextends_tags',
+            ],
             'debug': json.loads(os.getenv("ADRICOLORS_DEBUG_TEMPLATES", "true")),
         },
     },
@@ -131,7 +117,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 
-    # COmpressor
+    # Compressor
     'compressor.finders.CompressorFinder',
 ]
 
@@ -184,12 +170,6 @@ TIME_ZONE = os.getenv("ADRICOLORS_TIME_ZONE", "America/Lima")
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
-
-""" * * * * * * * * * * * * * * * * * *
-Wagtail Settings
-"""
-WAGTAIL_SITE_NAME = 'Adricolors'
 
 
 """ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
