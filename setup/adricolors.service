@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn Daemon for Adricolors Web Site
+After=network.target
+
+[Service]
+User=zodiac
+Group=zodiac
+WorkingDirectory=/home/zodiac/Development/SoftButterfly/adricolors/www
+ExecStart=/opt/anaconda/envs/adricolors/bin/gunicorn --workers 5 --bind unix:/home/zodiac/Development/SoftButterfly/adricolors/run/adricolors.sock adricolors.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

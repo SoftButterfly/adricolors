@@ -2,8 +2,12 @@
 # -*- encoding: utf-8 -*-
 import os
 import sys
+import dotenv
+
+DOTENV = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "setup", ".env")
 
 if __name__ == "__main__":
+    dotenv.read_dotenv(DOTENV)
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "adricolors.settings")
     try:
         from django.core.management import execute_from_command_line
